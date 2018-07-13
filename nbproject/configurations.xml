@@ -9,7 +9,6 @@
         <itemPath>Camera/InterfaceCamera.h</itemPath>
       </logicalFolder>
       <logicalFolder name="WebSocket" displayName="WebSocket" projectFiles="true">
-        <itemPath>WebSocket/base64.cpp</itemPath>
         <itemPath>WebSocket/base64.h</itemPath>
         <itemPath>WebSocket/client_ws.hpp</itemPath>
         <itemPath>WebSocket/client_wss.hpp</itemPath>
@@ -30,6 +29,9 @@
       <logicalFolder name="Camera" displayName="Camera" projectFiles="true">
         <itemPath>Camera/Camera.cpp</itemPath>
         <itemPath>Camera/InterfaceCamera.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="WebSocket" displayName="WebSocket" projectFiles="true">
+        <itemPath>WebSocket/base64.cpp</itemPath>
       </logicalFolder>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>

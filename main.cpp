@@ -57,7 +57,8 @@ int main(int argc, char** argv) {
         int size;
         if(readFile("/root/Workspace/test.jpg",buffer_file,size)) {
             cout << "Size image : " << size << endl;
-            string tempbuf = base64_encode((const unsigned char*)buffer_file,size);
+            string tempbuf = base64_encode((const unsigned char*)buffer_file, size);
+            cout << tempbuf << endl;
             *send_stream << tempbuf;
             //send_stream->write(buffer_file,size);
         } else {
@@ -83,50 +84,6 @@ int main(int argc, char** argv) {
     };
     
     echo.on_error = [](shared_ptr<WsServer::Connection> connection, const SimpleWeb::error_code &ec) {
-        cout << "Server: Error in connection " << connection.get() << ". " << "Error: " << ec << ", error message: " << ec.message() << endl;
-    };
-    
-    auto &echo_binary = server.endpoint["^/binary/?$"];
-    echo_binary.on_message = [](shared_ptr<WsServer::Connection> connection, shared_ptr<WsServer::Message> message) {
-        //message->binary();
-        //auto message_str = message->string();
-        cout << "Server : received " << std::to_string(message->size()) << " bytes" << endl;
-        char* buffer = new char[message->size()];
-        message->get(buffer, message->size()+1);
-        string str(buffer,message->size());
-        cout << "Server : received data to string - " << str << endl;
-        
-        auto send_stream = make_shared<WsServer::SendStream>();
-        char* buffer_file = NULL;
-        int size;
-        if(readFile("/root/Workspace/test.jpg",buffer_file,size)) {
-            cout << "Size image : " << size << endl;
-            //string tempbuf = base64_encode((const unsigned char*)buffer_file,size);
-            //*send_stream << tempbuf;
-            send_stream->write(buffer_file,size);
-        } else {
-            *send_stream << "Error read file" << endl;
-        }
-        //send_stream->write(buffer, message->size());
-
-        connection->send(send_stream, [](const SimpleWeb::error_code &ec) {
-            if(ec) {
-                cout << "Server: Error sending message. " <<
-                  // See http://www.boost.org/doc/libs/1_55_0/doc/html/boost_asio/reference.html, Error Codes for error code meanings
-                  "Error: " << ec << ", error message: " << ec.message() << endl;
-            }
-        });
-    };
-    
-    echo_binary.on_open = [](shared_ptr<WsServer::Connection> connection) {
-        cout << "Server: Opened connection " << connection.get() << endl;
-    };
-    
-    echo_binary.on_close = [](shared_ptr<WsServer::Connection> connection, int status, const string & /*reason*/) {
-        cout << "Server: Closed connection " << connection.get() << " with status code " << status << endl;
-    };
-    
-    echo_binary.on_error = [](shared_ptr<WsServer::Connection> connection, const SimpleWeb::error_code &ec) {
         cout << "Server: Error in connection " << connection.get() << ". " << "Error: " << ec << ", error message: " << ec.message() << endl;
     };
     
