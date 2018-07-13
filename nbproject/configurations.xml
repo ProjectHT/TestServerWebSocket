@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="Camera" displayName="Camera" projectFiles="true">
+        <itemPath>Camera/Camera.h</itemPath>
+        <itemPath>Camera/InterfaceCamera.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="WebSocket" displayName="WebSocket" projectFiles="true">
+        <itemPath>WebSocket/base64.cpp</itemPath>
+        <itemPath>WebSocket/base64.h</itemPath>
+        <itemPath>WebSocket/client_ws.hpp</itemPath>
+        <itemPath>WebSocket/client_wss.hpp</itemPath>
+        <itemPath>WebSocket/crypto.hpp</itemPath>
+        <itemPath>WebSocket/server_ws.hpp</itemPath>
+        <itemPath>WebSocket/server_wss.hpp</itemPath>
+        <itemPath>WebSocket/status_code.hpp</itemPath>
+        <itemPath>WebSocket/utility.hpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="Camera" displayName="Camera" projectFiles="true">
+        <itemPath>Camera/Camera.cpp</itemPath>
+        <itemPath>Camera/InterfaceCamera.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>WebSocket</Elem>
+    <Elem>Camera</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <incDir>
+            <pElem>/usr/local/include</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/local/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/testserverwebsocket</output>
+          <linkerAddLib>
+            <pElem>/usr/local/lib</pElem>
+          </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>/usr/local/lib</pElem>
+          </linkerDynSerch>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+            <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
+            <linkerOptionItem>`pkg-config --libs openssl`</linkerOptionItem>
+            <linkerOptionItem>-lboost_atomic -lboost_chrono -lboost_container -lboost_context -lboost_contract -lboost_coroutine -lboost_date_time -lboost_filesystem -lboost_graph -lboost_iostreams -lboost_locale -lboost_log -lboost_log_setup -lboost_math_c99 -lboost_math_c99f -lboost_math_c99l -lboost_math_tr1 -lboost_math_tr1f -lboost_math_tr1l -lboost_prg_exec_monitor -lboost_program_options -lboost_python27 -lboost_random -lboost_regex -lboost_serialization -lboost_signals -lboost_stacktrace_addr2line -lboost_stacktrace_backtrace -lboost_stacktrace_basic -lboost_stacktrace_noop -lboost_system -lboost_thread -lboost_timer -lboost_type_erasure -lboost_unit_test_framework -lboost_wave -lboost_wserialization</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libavcodec-ffmpeg`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libavformat-ffmpeg`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libavutil-ffmpeg`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libswresample-ffmpeg`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libswscale-ffmpeg`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs opencv`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Camera/Camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Camera/Camera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Camera/InterfaceCamera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Camera/InterfaceCamera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/base64.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WebSocket/base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/client_ws.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/client_wss.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/crypto.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/server_ws.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/server_wss.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/status_code.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/utility.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Camera/Camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Camera/Camera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Camera/InterfaceCamera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Camera/InterfaceCamera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/base64.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="WebSocket/base64.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/client_ws.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/client_wss.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/crypto.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/server_ws.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/server_wss.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/status_code.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="WebSocket/utility.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
