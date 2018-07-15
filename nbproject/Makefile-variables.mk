@@ -15,13 +15,13 @@ CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
 CND_PACKAGE_NAME_Debug=testserverwebsocket.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/testserverwebsocket.tar
 # Release configuration
-CND_PLATFORM_Release=None-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/None-Windows
+CND_PLATFORM_Release=MinGW64-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/MinGW64-Windows
 CND_ARTIFACT_NAME_Release=testserverwebsocket
-CND_ARTIFACT_PATH_Release=dist/Release/None-Windows/testserverwebsocket
-CND_PACKAGE_DIR_Release=dist/Release/None-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW64-Windows/testserverwebsocket
+CND_PACKAGE_DIR_Release=dist/Release/MinGW64-Windows/package
 CND_PACKAGE_NAME_Release=testserverwebsocket.tar
-CND_PACKAGE_PATH_Release=dist/Release/None-Windows/package/testserverwebsocket.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW64-Windows/package/testserverwebsocket.tar
 #
 # include compiler specific variables
 #

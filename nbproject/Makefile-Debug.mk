@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Camera/Camera.o \
 	${OBJECTDIR}/Camera/InterfaceCamera.o \
+	${OBJECTDIR}/Object/MyObject.o \
 	${OBJECTDIR}/WebSocket/base64.o \
 	${OBJECTDIR}/main.o
 
@@ -74,6 +75,11 @@ ${OBJECTDIR}/Camera/InterfaceCamera.o: Camera/InterfaceCamera.cpp
 	${MKDIR} -p ${OBJECTDIR}/Camera
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/local/include `pkg-config --cflags openssl` `pkg-config --cflags libavcodec-ffmpeg` `pkg-config --cflags libavformat-ffmpeg` `pkg-config --cflags libavutil-ffmpeg` `pkg-config --cflags libswresample-ffmpeg` `pkg-config --cflags libswscale-ffmpeg` `pkg-config --cflags opencv` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Camera/InterfaceCamera.o Camera/InterfaceCamera.cpp
+
+${OBJECTDIR}/Object/MyObject.o: Object/MyObject.cpp
+	${MKDIR} -p ${OBJECTDIR}/Object
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/local/include `pkg-config --cflags openssl` `pkg-config --cflags libavcodec-ffmpeg` `pkg-config --cflags libavformat-ffmpeg` `pkg-config --cflags libavutil-ffmpeg` `pkg-config --cflags libswresample-ffmpeg` `pkg-config --cflags libswscale-ffmpeg` `pkg-config --cflags opencv` -std=c++11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Object/MyObject.o Object/MyObject.cpp
 
 ${OBJECTDIR}/WebSocket/base64.o: WebSocket/base64.cpp
 	${MKDIR} -p ${OBJECTDIR}/WebSocket

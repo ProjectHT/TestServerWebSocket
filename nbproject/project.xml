@@ -12,6 +12,7 @@
             <sourceRootList>
                 <sourceRootElem>WebSocket</sourceRootElem>
                 <sourceRootElem>Camera</sourceRootElem>
+                <sourceRootElem>Object</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

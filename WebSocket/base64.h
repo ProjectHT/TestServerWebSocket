@@ -16,9 +16,12 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
-std::string base64_encode(unsigned char const* , unsigned int len);
-std::string base64_decode(std::string const& s);
+using namespace std;
+
+string base64_encode(unsigned char const* , unsigned int len);
+void base64_decode(string const& s, vector<char>& data);
 
 #endif /* BASE64_H */
 

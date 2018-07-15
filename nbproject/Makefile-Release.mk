@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=None-Windows
+CND_PLATFORM=MinGW64-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Camera/Camera.o \
 	${OBJECTDIR}/Camera/InterfaceCamera.o \
+	${OBJECTDIR}/Object/MyObject.o \
 	${OBJECTDIR}/WebSocket/base64.o \
 	${OBJECTDIR}/main.o
 
@@ -74,6 +75,11 @@ ${OBJECTDIR}/Camera/InterfaceCamera.o: Camera/InterfaceCamera.cpp
 	${MKDIR} -p ${OBJECTDIR}/Camera
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Camera/InterfaceCamera.o Camera/InterfaceCamera.cpp
+
+${OBJECTDIR}/Object/MyObject.o: Object/MyObject.cpp
+	${MKDIR} -p ${OBJECTDIR}/Object
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Object/MyObject.o Object/MyObject.cpp
 
 ${OBJECTDIR}/WebSocket/base64.o: WebSocket/base64.cpp
 	${MKDIR} -p ${OBJECTDIR}/WebSocket
